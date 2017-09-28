@@ -8,4 +8,5 @@ for i = 1:size(files, 1)
     cnnWithImg(path);
     [~,name,~] = fileparts(files(i).name);
     fprintf("Results of each layer are saved in result/%s\n", name);
+    fprintf("---------------------------------------------------------\n")
 end
