@@ -7,5 +7,5 @@ function cnnWithImg(imgPath)
 
     probvec = forwardPassWithLayersResult(im, filterbanks, biasvectors, ['result/', name]);
     [prob, maxIdx] = max(probvec);
-    fprintf('The result is %s with prob %.4f\n', classlabels{maxIdx}, prob);
+    fprintf('The prediction is %s with prob %.4f\n', classlabels{maxIdx}, prob);
 end

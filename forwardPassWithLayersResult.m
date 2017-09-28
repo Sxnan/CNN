@@ -2,9 +2,6 @@ function probVec = forwardPassWithLayersResult(inImg, parameters, biasvectors, r
     if ~exist('root', 'var')
         root = '.';
     end
-    if ~exist('layers_result', 'dir')
-        mkdir('layers_result')
-    end
     load debuggingTest.mat;
     %inImg: 32 x 32 x 3
     %nomalize input img
