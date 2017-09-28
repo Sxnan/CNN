@@ -101,6 +101,17 @@ function save_result(imgs, path, root)
         mkdir([root,'/', path])
     end
     for i=1:size(imgs, 3)
-        imwrite(imgs(:,:,i),[root,'/', path,'/',num2str(i),'.jpg'])
+        img = enlargeImg(imgs(:,:,i), 16);
+        imwrite(img,[root,'/', path,'/',num2str(i),'.jpg'])
+    end
+end
+
+function newImg = enlargeImg(img, scale)
+    new_size = size(img, 1) * scale;
+    newImg = zeros(new_size);
+    for i=1:new_size
+        for j=1:new_size
+            newImg(i, j) = img(int32(ceil(i/scale)), int32(ceil(j/scale)));
+        end
     end
 end
