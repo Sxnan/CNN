@@ -1,5 +1,7 @@
 function probVec = forwardPass(inImg, parameters, biasvectors)
     %inImg: 32 x 32 x 3
+    %parameters: filterbanks 1 x 18 cell
+    %biasvectors: 1 x 18 cell
     
     %nomalize input img
     img = imgNormalization(inImg);

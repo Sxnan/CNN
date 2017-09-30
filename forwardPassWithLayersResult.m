@@ -1,9 +1,14 @@
 function probVec = forwardPassWithLayersResult(inImg, parameters, biasvectors, root)
+
+    %inImg: 32 x 32 x 3
+    %parameters: filterbanks 1 x 18 cell
+    %biasvectors: 1 x 18 cell
+    
     if ~exist('root', 'var')
         root = '.';
     end
     load debuggingTest.mat;
-    %inImg: 32 x 32 x 3
+    
     %nomalize input img
     img = imgNormalization(inImg);
 

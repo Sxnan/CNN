@@ -1,5 +1,6 @@
-files = dir('img');
+files = dir('img'); %get all the image in ./img
 for i = 1:size(files, 1)
+    %run CNN on images one by one
     if (files(i).name=="." ||files(i).name=="..")
         continue;
     end
